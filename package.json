@@ -1,0 +1,11 @@
+{
+    "name": "Flump",
+    "version": "1.0.0",
+    "description": "Flump Server For Render",
+    "dependencies": {
+        "ws": "*"
+    },
+    "scripts": {
+        "start": "node flump.js"
+    },
+}
