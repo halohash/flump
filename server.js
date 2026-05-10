@@ -39,7 +39,21 @@ function startQemu() {
     "-display",
     "none",
     "-no-reboot"
-  ])
+  ], {
+    stdio: "pipe"
+  })
+
+  qemu.on("error", (err) => {
+    console.log("QEMU ERROR:", err)
+  })
+
+  qemu.stdout.on("data", (d) => {
+    console.log("QEMU STDOUT:", d.toString())
+  })
+
+  qemu.stderr.on("data", (d) => {
+    console.log("QEMU STDERR:", d.toString())
+  })
 }
 
 function stopQemu() {
