@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: qemu-vm
+    env: node
+    plan: standard
+    buildCommand: |
+      apt-get update
+      apt-get install -y qemu-system-x86 qemu-utils
+      npm install
+    startCommand: node server.js
