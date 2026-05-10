@@ -11,7 +11,7 @@ const PORT = 3000
 const VNC_HOST = "127.0.0.1"
 const VNC_PORT = 5901
 
-const IMAGE_URL = "https://example.com/disk.img"
+const IMAGE_URL = "https://file.garden/aUYIWVAKvQxCBY-_/vm_node/main.img"
 const IMAGE_PATH = "/tmp/disk.img"
 
 let qemu = null
