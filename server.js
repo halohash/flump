@@ -25,7 +25,7 @@ async function downloadImage() {
   const buffer = Buffer.from(await res.arrayBuffer())
   fs.writeFileSync(IMAGE_PATH, buffer)
 }
-
+console.log("Disk exists:", fs.existsSync(IMAGE_PATH))
 function startQemu() {
   if (qemu) return
 
