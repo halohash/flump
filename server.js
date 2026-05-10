@@ -84,6 +84,7 @@ app.get("/api/start", async (req, res) => {
     startQemu()
     res.json({ status: "started" })
   } catch (e) {
+    console.log(e)
     res.status(500).json({ error: "failed to start vm" })
   }
 })
